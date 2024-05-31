@@ -6,9 +6,9 @@ services:
     env_file:
       - .env
     volumes:
-      - /home/rageltd/Projects/sandstorm-server/ismc2/config/ini:/home/steam/steamcmd/sandstorm/Insurgency/Saved/Config/LinuxServer
-      - /home/rageltd/Projects/sandstorm-server/ismc2/config/txt:/home/steam/steamcmd/sandstorm/Insurgency/Config/Server
-      - /home/rageltd/Projects/sandstorm-server/ismc2/mods:/home/steam/steamcmd/sandstorm/Insurgency/Mods
+      - ./ismc2/config/ini:/home/steam/steamcmd/sandstorm/Insurgency/Saved/Config/LinuxServer
+      - ./ismc2/config/txt:/home/steam/steamcmd/sandstorm/Insurgency/Config/Server
+      - ./ismc2/mods:/home/steam/steamcmd/sandstorm/Insurgency/Mods
     ports:
       - "${PORT}:${PORT}/udp"
       - "${QUERYPORT}:${QUERYPORT}/udp"
